@@ -13,8 +13,8 @@ driver.maximize_window()
 driver.implicitly_wait(10)
 
 driver.find_element("xpath", "//a[.='Login']").click()
-driver.find_element("xpath", "(//input[@type='text'])[1]").send_keys("saitejadasari05@gmail.com")
-driver.find_element("xpath", "//input[@type='password']").send_keys("Teja@9346")
+driver.find_element("xpath", "(//input[@type='text'])[1]").send_keys("Enter your username")
+driver.find_element("xpath", "//input[@type='password']").send_keys("Enter your password")
 driver.find_element("xpath", "//button[text()='Login']").click()
 
 driver.find_element("xpath", "//span[.='Search jobs here']").click()
@@ -69,4 +69,5 @@ with open('naukri_jobs.csv', 'w', newline='', encoding='utf-8') as file:
         except Exception as E:
             print("ERROR EXTRACTING JOB", E)
     print("✅ Job data successfully saved to naukri_jobs.csv")
+
     driver.quit()
